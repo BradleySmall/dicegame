@@ -1,11 +1,11 @@
 import random
 
 
-class Die:
+class Die():
     def __init__(self, pips=6, v=None):
         self.pips = pips
 
-        if not v or 1 > v or v > self.pips:
+        if not v or v < 1 or v > self.pips:
             v = random.randint(1, self.pips)
         self.val = v
 
@@ -21,13 +21,12 @@ class Die:
     def __eq__(self, other):
         if isinstance(other, Die):
             return self.val == other.val
-        elif isinstance(other, int):
+        if isinstance(other, int):
             return self.val == other
-        elif isinstance(other, str):
+        if isinstance(other, str):
             return str(self.val) == other
-        else:
-            return False
+        return False
 
     def roll(self):
-        self.val = random.randint(1, 6)
+        self.val = random.randint(1, self.pips)
         return self
