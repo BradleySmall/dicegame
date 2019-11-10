@@ -1,7 +1,12 @@
+"""Dice module for Die class."""
 import random
 
 
+
+
 class Die():
+
+
     def __init__(self, pips=6, v=None):
         self.pips = pips
 
