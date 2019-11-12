@@ -2,10 +2,8 @@
 import random
 
 
-
-
 class Die():
-
+    """Class for dice."""
 
     def __init__(self, pips=6, v=None):
         self.pips = pips
@@ -33,5 +31,6 @@ class Die():
         return False
 
     def roll(self):
+        """Roll the die and change the value."""
         self.val = random.randint(1, self.pips)
         return self

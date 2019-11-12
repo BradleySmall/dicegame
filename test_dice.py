@@ -2,6 +2,7 @@
 import unittest
 import dice
 
+
 class TestDice(unittest.TestCase):
     """Test the Dice module."""
 
